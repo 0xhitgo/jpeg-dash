@@ -1,12 +1,8 @@
 "use client";
 import Metrics from "./components/Metrics";
 import Image from "next/image";
-import { createClient, fetchExchange, Provider } from "urql";
-
-export const jpegdAnalyticsClient = createClient({
-  url: process.env.NEXT_PONDER_GRAPHQL_URL || "http://localhost:42069",
-  exchanges: [fetchExchange],
-});
+import { Provider } from "urql";
+import { jpegdAnalyticsClient } from "./utils";
 
 export default function Home() {
   return (
